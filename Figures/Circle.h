@@ -9,4 +9,6 @@ private:
 public:
 	Circle(double radius);
 	double perimeter() const override;
+	Figure* clone() const override;
+	std::string toString() const override;
 };

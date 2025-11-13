@@ -19,3 +19,11 @@ Rectangle::Rectangle(double width, double height) {
 double Rectangle::perimeter() const {
 	return 2 * (width + height);
 }
+
+Figure* Rectangle::clone() const {
+	return new Rectangle(*this);
+}
+
+std::string Rectangle::toString() const {
+	return "rectangle " + std::to_string(width) + " " + std::to_string(height);
+}

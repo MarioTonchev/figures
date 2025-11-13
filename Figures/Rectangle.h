@@ -2,7 +2,7 @@
 
 #include "Figure.h"
 
-class Rectangle : Figure {
+class Rectangle : public Figure {
 private:
 	double width;
 	double height;
@@ -10,4 +10,6 @@ private:
 public:
 	Rectangle(double width, double height);
 	double perimeter() const override;
+	Figure* clone() const override;
+	std::string toString() const override;
 };

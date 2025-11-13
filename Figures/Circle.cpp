@@ -19,3 +19,11 @@ Circle::Circle(double radius) {
 double Circle::perimeter() const {
 	return 2 * std::numbers::pi * radius;
 }
+
+Figure* Circle::clone() const {
+	return new Circle(*this);
+}
+
+std::string Circle::toString() const {
+	return "circle " + std::to_string(radius);
+}

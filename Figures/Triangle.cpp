@@ -25,3 +25,11 @@ Triangle::Triangle(double a, double b, double c) {
 double Triangle::perimeter() const {
 	return a + b + c;
 }
+
+Figure* Triangle::clone() const {
+	return new Triangle(*this);
+}
+
+std::string Triangle::toString() const {
+	return "triangle " + std::to_string(a) + " " + std::to_string(b) + " " + std::to_string(c);
+}
