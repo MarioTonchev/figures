@@ -16,6 +16,21 @@
     <Filter Include="Source Files\Figures">
       <UniqueIdentifier>{ec569d8d-1a10-4c9a-944c-5c1259f3bb97}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Figures">
+      <UniqueIdentifier>{a31a2356-b8b9-496f-8832-258a6f060d4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Factories">
+      <UniqueIdentifier>{3b155773-64ca-4f9c-9331-8eddb9e0b8ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StringConversion">
+      <UniqueIdentifier>{42933702-b4db-4629-be5a-ff17b923c00d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StringConversion">
+      <UniqueIdentifier>{285993db-d99c-4623-aba2-e3dbdd6cf68a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Factories">
+      <UniqueIdentifier>{7537c3d3-dfe3-4df6-be56-4e0ad478b808}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Figures.cpp">
@@ -30,19 +45,40 @@
     <ClCompile Include="Rectangle.cpp">
       <Filter>Source Files\Figures</Filter>
     </ClCompile>
+    <ClCompile Include="StringToFigure.cpp">
+      <Filter>Source Files\StringConversion</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomFigureFactory.cpp">
+      <Filter>Source Files\Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamFigureFactory.cpp">
+      <Filter>Source Files\Factories</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Figure.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Circle.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Figures</Filter>
+    </ClInclude>
+    <ClInclude Include="Figure.h">
+      <Filter>Header Files\Figures</Filter>
     </ClInclude>
     <ClInclude Include="Rectangle.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Figures</Filter>
     </ClInclude>
     <ClInclude Include="Triangle.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Figures</Filter>
+    </ClInclude>
+    <ClInclude Include="StringToFigure.h">
+      <Filter>Header Files\StringConversion</Filter>
+    </ClInclude>
+    <ClInclude Include="FigureFactory.h">
+      <Filter>Header Files\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomFigureFactory.h">
+      <Filter>Header Files\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamFigureFactory.h">
+      <Filter>Header Files\Factories</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

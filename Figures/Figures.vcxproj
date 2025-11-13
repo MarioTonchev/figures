@@ -102,6 +102,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,13 +126,20 @@
   <ItemGroup>
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Figures.cpp" />
+    <ClCompile Include="RandomFigureFactory.cpp" />
     <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="StreamFigureFactory.cpp" />
+    <ClCompile Include="StringToFigure.cpp" />
     <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Figure.h" />
+    <ClInclude Include="FigureFactory.h" />
+    <ClInclude Include="RandomFigureFactory.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="StreamFigureFactory.h" />
+    <ClInclude Include="StringToFigure.h" />
     <ClInclude Include="Triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
