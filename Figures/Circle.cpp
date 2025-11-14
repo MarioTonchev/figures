@@ -20,8 +20,8 @@ double Circle::perimeter() const {
 	return 2 * std::numbers::pi * radius;
 }
 
-Figure* Circle::clone() const {
-	return new Circle(*this);
+std::unique_ptr<Figure> Circle::clone() const {
+	return std::make_unique<Circle>(radius);
 }
 
 std::string Circle::toString() const {

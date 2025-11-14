@@ -20,8 +20,8 @@ double Rectangle::perimeter() const {
 	return 2 * (width + height);
 }
 
-Figure* Rectangle::clone() const {
-	return new Rectangle(*this);
+std::unique_ptr<Figure> Rectangle::clone() const {
+	return std::make_unique<Rectangle>(width, height);
 }
 
 std::string Rectangle::toString() const {

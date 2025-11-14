@@ -10,6 +10,6 @@ private:
 public:
 	Rectangle(double width, double height);
 	double perimeter() const override;
-	Figure* clone() const override;
+	std::unique_ptr<Figure> clone() const override;
 	std::string toString() const override;
 };

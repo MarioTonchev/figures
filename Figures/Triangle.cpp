@@ -26,8 +26,8 @@ double Triangle::perimeter() const {
 	return a + b + c;
 }
 
-Figure* Triangle::clone() const {
-	return new Triangle(*this);
+std::unique_ptr<Figure> Triangle::clone() const {
+	return std::make_unique<Triangle>(a, b, c);
 }
 
 std::string Triangle::toString() const {
