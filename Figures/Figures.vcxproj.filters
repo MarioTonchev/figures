@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Factories">
       <UniqueIdentifier>{7537c3d3-dfe3-4df6-be56-4e0ad478b808}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\AbstractFactories">
+      <UniqueIdentifier>{c5fb0401-c64a-4119-a9dd-b2cbf21ddac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AbstractFactories">
+      <UniqueIdentifier>{e9139a35-d7f6-4558-ab56-9edbef3bc3d4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Figures.cpp">
@@ -53,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="StreamFigureFactory.cpp">
       <Filter>Source Files\Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="FigureFactorySelector.cpp">
+      <Filter>Source Files\AbstractFactories</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +88,9 @@
     </ClInclude>
     <ClInclude Include="StreamFigureFactory.h">
       <Filter>Header Files\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="FigureFactorySelector.h">
+      <Filter>Header Files\AbstractFactories</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
