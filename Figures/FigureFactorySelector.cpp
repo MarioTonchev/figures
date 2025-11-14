@@ -1,9 +1,9 @@
 #include "FigureFactorySelector.h"
 
-FigureFactory* FigureFactorySelector::createFactory(std::string& type, std::istream* in = nullptr) {
+std::unique_ptr<FigureFactory> FigureFactorySelector::createFactory(std::string& type, std::istream* in = nullptr) {
 	if (type == "random")
 	{
-		return new RandomFigureFactory();
+		return std::make_unique<RandomFigureFactory>();
 	}
 	else if (type == "stream")
 	{
@@ -12,7 +12,7 @@ FigureFactory* FigureFactorySelector::createFactory(std::string& type, std::istr
 			throw std::invalid_argument("StreamFactory requires an input stream");
 		}
 
-		return new StreamFigureFactory(*in);
+		return std::make_unique<StreamFigureFactory>(*in);
 	}
 	else
 	{

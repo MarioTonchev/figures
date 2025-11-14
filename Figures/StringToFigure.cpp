@@ -1,6 +1,6 @@
 #include "StringToFigure.h"
 
-Figure* StringToFigure::createFigureFrom(std::string input) {
+std::unique_ptr<Figure> StringToFigure::createFigureFrom(std::string input) {
 	std::stringstream ss(input);
 
 	std::string type;
@@ -15,7 +15,7 @@ Figure* StringToFigure::createFigureFrom(std::string input) {
 			throw std::invalid_argument("Triangle requires 3 sides");
 		}
 
-		return new Triangle(a, b, c);
+		return std::make_unique<Triangle>(a, b, c);
 	}
 	else if (type == "rectangle")
 	{
@@ -26,7 +26,7 @@ Figure* StringToFigure::createFigureFrom(std::string input) {
 			throw std::invalid_argument("Rectangle requires width and height");
 		}
 
-		return new Rectangle(width, height);
+		return std::make_unique<Rectangle>(width, height);
 	}
 	else if (type == "circle")
 	{
@@ -37,7 +37,7 @@ Figure* StringToFigure::createFigureFrom(std::string input) {
 			throw std::invalid_argument("Circle requires radius");
 		}
 
-		return new Circle(radius);
+		return std::make_unique<Circle>(radius);
 	}
 	else
 	{

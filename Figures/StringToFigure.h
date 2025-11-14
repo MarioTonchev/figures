@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include <sstream>
 #include "Triangle.h"
 #include "Rectangle.h"
@@ -7,5 +8,5 @@
 
 class StringToFigure {
 public:
-	Figure* createFigureFrom(std::string input);
+	std::unique_ptr<Figure> createFigureFrom(std::string input);
 };
