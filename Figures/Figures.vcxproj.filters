@@ -37,6 +37,12 @@
     <Filter Include="Source Files\AbstractFactories">
       <UniqueIdentifier>{e9139a35-d7f6-4558-ab56-9edbef3bc3d4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Utilities">
+      <UniqueIdentifier>{6daa292c-3342-4a2e-ab10-7338b6705a76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities">
+      <UniqueIdentifier>{bd00cdad-5a9b-4703-80d0-3260e647a2dd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Figures.cpp">
@@ -62,6 +68,9 @@
     </ClCompile>
     <ClCompile Include="FigureFactorySelector.cpp">
       <Filter>Source Files\AbstractFactories</Filter>
+    </ClCompile>
+    <ClCompile Include="FigureOperations.cpp">
+      <Filter>Source Files\Utilities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +100,9 @@
     </ClInclude>
     <ClInclude Include="FigureFactorySelector.h">
       <Filter>Header Files\AbstractFactories</Filter>
+    </ClInclude>
+    <ClInclude Include="FigureOperations.h">
+      <Filter>Header Files\Utilities</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
