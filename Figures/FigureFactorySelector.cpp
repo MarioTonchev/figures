@@ -1,18 +1,18 @@
+#include <iostream>
 #include "FigureFactorySelector.h"
 
-std::unique_ptr<FigureFactory> FigureFactorySelector::createFactory(std::string& type, std::istream* in = nullptr) {
+std::unique_ptr<FigureFactory> FigureFactorySelector::createFactory(std::string& type, std::istream* stream) {
 	if (type == "random")
 	{
 		return std::make_unique<RandomFigureFactory>();
 	}
-	else if (type == "stream")
+	else if (type == "console")
 	{
-		if (!in)
-		{
-			throw std::invalid_argument("StreamFactory requires an input stream");
-		}
-
-		return std::make_unique<StreamFigureFactory>(*in);
+		return std::make_unique<StreamFigureFactory>(std::cin);
+	}
+	else if (type == "file")
+	{
+		return std::make_unique<StreamFigureFactory>(*stream);
 	}
 	else
 	{

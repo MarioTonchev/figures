@@ -5,5 +5,5 @@
 
 class FigureFactorySelector {
 public:
-	static std::unique_ptr<FigureFactory> createFactory(std::string& type, std::istream* in = nullptr);
+	static std::unique_ptr<FigureFactory> createFactory(std::string& type, std::istream* stream = nullptr);
 };
