@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\FigureTests">
+      <UniqueIdentifier>{ae88201d-7cb1-48f6-91f6-7b9d649411cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FactoryTests">
+      <UniqueIdentifier>{34633a48-aa72-47cc-b051-fd7327808141}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="catch_amalgamated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_circle.cpp">
+      <Filter>Source Files\FigureTests</Filter>
+    </ClCompile>
+    <ClCompile Include="test_triangle.cpp">
+      <Filter>Source Files\FigureTests</Filter>
+    </ClCompile>
+    <ClCompile Include="test_rectangle.cpp">
+      <Filter>Source Files\FigureTests</Filter>
+    </ClCompile>
+    <ClCompile Include="test_random_factory.cpp">
+      <Filter>Source Files\FactoryTests</Filter>
+    </ClCompile>
+    <ClCompile Include="test_factories.cpp">
+      <Filter>Source Files\FactoryTests</Filter>
+    </ClCompile>
+    <ClCompile Include="test_string_to_figure.cpp">
+      <Filter>Source Files\FactoryTests</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="catch_amalgamated.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
