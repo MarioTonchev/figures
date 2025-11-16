@@ -43,11 +43,11 @@
     <Filter Include="Source Files\Utilities">
       <UniqueIdentifier>{bd00cdad-5a9b-4703-80d0-3260e647a2dd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Build">
+      <UniqueIdentifier>{471cb81e-a1e3-4329-b70f-3d47df4b0dba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Figures.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Circle.cpp">
       <Filter>Source Files\Figures</Filter>
     </ClCompile>
