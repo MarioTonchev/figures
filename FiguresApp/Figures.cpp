@@ -100,12 +100,15 @@ int main()
 			}
 			else
 			{
-				std::cout << "Invalid option" << endl;
-				break;
+				throw invalid_argument("Invalid choice");
 			}
 		}
 	}
 	catch (const invalid_argument& e) {
+		cout << e.what();
+		return 1;
+	}
+	catch (const overflow_error& e) {
 		cout << e.what();
 		return 1;
 	}
