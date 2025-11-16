@@ -7,14 +7,14 @@ Triangle::Triangle(double a, double b, double c) {
 		throw std::invalid_argument("Triangle sides must be greater than zero");
 	}
 
-	if (a + b <= c || a + c <= b || b + c <= a)
-	{
-		throw std::invalid_argument("Triangle inequality");
-	}
-
 	if (a > std::numeric_limits<double>::max() - b - c)
 	{
 		throw std::overflow_error("Triangle perimeter will overflow");
+	}
+
+	if (a + b <= c || a + c <= b || b + c <= a)
+	{
+		throw std::invalid_argument("Triangle inequality");
 	}
 
 	this->a = a;
@@ -31,5 +31,8 @@ std::unique_ptr<Figure> Triangle::clone() const {
 }
 
 std::string Triangle::toString() const {
-	return "triangle " + std::to_string(a) + " " + std::to_string(b) + " " + std::to_string(c);
+	std::ostringstream oss;
+	oss << std::fixed << std::setprecision(2);
+	oss << "triangle " << a << " " << b << " " << c;
+	return oss.str();
 }

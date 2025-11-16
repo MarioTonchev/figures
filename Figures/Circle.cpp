@@ -25,5 +25,8 @@ std::unique_ptr<Figure> Circle::clone() const {
 }
 
 std::string Circle::toString() const {
-	return "circle " + std::to_string(radius);
+	std::ostringstream oss;
+	oss << std::fixed << std::setprecision(2);
+	oss << "circle " << radius;
+	return oss.str();
 }

@@ -2,6 +2,8 @@
 
 #include <string>
 #include <memory>
+#include <sstream>
+#include <iomanip>
 
 class Figure {
 public:

@@ -25,5 +25,8 @@ std::unique_ptr<Figure> Rectangle::clone() const {
 }
 
 std::string Rectangle::toString() const {
-	return "rectangle " + std::to_string(width) + " " + std::to_string(height);
+	std::ostringstream oss;
+	oss << std::fixed << std::setprecision(2);
+	oss << "rectangle " << width << " " << height;
+	return oss.str();
 }
