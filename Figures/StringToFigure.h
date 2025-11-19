@@ -9,5 +9,5 @@
 
 class StringToFigure {
 public:
-	std::unique_ptr<Figure> createFigureFrom(std::string& input);
+	std::unique_ptr<Figure> createFigureFrom(std::string input);
 };

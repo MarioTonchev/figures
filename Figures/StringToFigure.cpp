@@ -1,6 +1,6 @@
 #include "StringToFigure.h"
 
-std::unique_ptr<Figure> StringToFigure::createFigureFrom(std::string& input) {
+std::unique_ptr<Figure> StringToFigure::createFigureFrom(std::string input) {
 	std::stringstream ss(input);
 
 	std::string type;
