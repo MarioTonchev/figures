@@ -127,8 +127,10 @@
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="FigureFactorySelector.cpp" />
     <ClCompile Include="FigureOperations.cpp" />
+    <ClCompile Include="FigureRegistry.cpp" />
     <ClCompile Include="RandomFigureFactory.cpp" />
     <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="RegisterFigures.cpp" />
     <ClCompile Include="StreamFigureFactory.cpp" />
     <ClCompile Include="StringToFigure.cpp" />
     <ClCompile Include="Triangle.cpp" />
@@ -139,8 +141,10 @@
     <ClInclude Include="FigureFactory.h" />
     <ClInclude Include="FigureFactorySelector.h" />
     <ClInclude Include="FigureOperations.h" />
+    <ClInclude Include="FigureRegistry.h" />
     <ClInclude Include="RandomFigureFactory.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="RegisterFigures.h" />
     <ClInclude Include="StreamFigureFactory.h" />
     <ClInclude Include="StringToFigure.h" />
     <ClInclude Include="Triangle.h" />
