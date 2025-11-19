@@ -9,6 +9,8 @@ private:
 
 public:
 	Rectangle(double width, double height);
+	double getWidth() const;
+	double getHeight() const;
 	double perimeter() const override;
 	std::unique_ptr<Figure> clone() const override;
 	std::string toString() const override;

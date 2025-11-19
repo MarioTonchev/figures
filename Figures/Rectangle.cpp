@@ -16,6 +16,14 @@ Rectangle::Rectangle(double width, double height) {
 	this->height = height;
 }
 
+double Rectangle::getWidth() const {
+	return width;
+}
+
+double Rectangle::getHeight() const {
+	return height;
+}
+
 double Rectangle::perimeter() const {
 	return 2 * (width + height);
 }

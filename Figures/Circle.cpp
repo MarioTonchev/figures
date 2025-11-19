@@ -16,6 +16,10 @@ Circle::Circle(double radius) {
 	this->radius = radius;
 }
 
+double Circle::getRadius() const {
+	return radius;
+}
+
 double Circle::perimeter() const {
 	return 2 * std::numbers::pi * radius;
 }

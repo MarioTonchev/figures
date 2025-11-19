@@ -22,6 +22,18 @@ Triangle::Triangle(double a, double b, double c) {
 	this->c = c;
 }
 
+double Triangle::getA() const {
+	return a;
+}
+
+double Triangle::getB() const {
+	return b;
+}
+
+double Triangle::getC() const {
+	return c;
+}
+
 double Triangle::perimeter() const {
 	return a + b + c;
 }
