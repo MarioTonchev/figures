@@ -39,7 +39,7 @@
     <ClCompile Include="test_random_factory.cpp">
       <Filter>Source Files\FactoryTests</Filter>
     </ClCompile>
-    <ClCompile Include="test_factories.cpp">
+    <ClCompile Include="test_stream_factory.cpp">
       <Filter>Source Files\FactoryTests</Filter>
     </ClCompile>
     <ClCompile Include="test_string_to_figure.cpp">

@@ -21,7 +21,7 @@
   <ItemGroup>
     <ClCompile Include="catch_amalgamated.cpp" />
     <ClCompile Include="test_circle.cpp" />
-    <ClCompile Include="test_factories.cpp" />
+    <ClCompile Include="test_stream_factory.cpp" />
     <ClCompile Include="test_random_factory.cpp" />
     <ClCompile Include="test_triangle.cpp" />
     <ClCompile Include="test_main.cpp" />
