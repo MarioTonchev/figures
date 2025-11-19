@@ -19,31 +19,54 @@ TEST_CASE("RandomFigureFactory always returns a valid Figure subtype") {
     }
 }
 
-TEST_CASE("RandomFigureFactory generates all figure types") {
+TEST_CASE("RandomFigureFactory values are within expected numeric range") {
     RandomFigureFactory factory;
 
-    int triangles = 0, rectangles = 0, circles = 0;
+    for (int i = 0; i < 200; i++) {
+        auto fig = factory.create();
 
-    const int n = 600;
+        double min = 1.0;
+        double max = 10001.0;
 
-    for (int i = 0; i < n; i++) {
-        auto f = factory.create();
+        if (auto t = dynamic_cast<Triangle*>(fig.get())) {
+            REQUIRE(t->getA() >= min);
+            REQUIRE(t->getB() >= min);
+            REQUIRE(t->getC() >= min);
 
-        if (dynamic_cast<Triangle*>(f.get()))
-        {
-            triangles++;
+            REQUIRE(t->getA() <= max);
+            REQUIRE(t->getB() <= max);
+            REQUIRE(t->getC() <= max);
         }
-        if (dynamic_cast<Rectangle*>(f.get()))
-        {
-            rectangles++;
+        if (auto r = dynamic_cast<Rectangle*>(fig.get())) {
+            REQUIRE(r->getWidth() >= min);
+            REQUIRE(r->getHeight() >= min);
+
+            REQUIRE(r->getWidth() <= max);
+            REQUIRE(r->getHeight() <= max);
         }
-        if (dynamic_cast<Circle*>(f.get()))
-        {
-            circles++;
+        if (auto c = dynamic_cast<Circle*>(fig.get())) {
+            REQUIRE(c->getRadius() >= min);
+            REQUIRE(c->getRadius() <= max);
         }
     }
+}
 
-    REQUIRE(triangles > 50);
-    REQUIRE(rectangles > 50);
-    REQUIRE(circles > 50);
+TEST_CASE("RandomFigureFactory reproducibility with fixed seed") {
+    srand(12345);
+
+    RandomFigureFactory f1;
+    std::vector<std::string> firstRun;
+
+    for (int i = 0; i < 20; i++) {
+        auto fig = f1.create();
+        firstRun.push_back(fig->toString());
+    }
+
+    srand(12345);
+
+    RandomFigureFactory f2;
+    for (int i = 0; i < 20; i++) {
+        auto fig = f2.create();
+        REQUIRE(fig->toString() == firstRun[i]);
+    }
 }
