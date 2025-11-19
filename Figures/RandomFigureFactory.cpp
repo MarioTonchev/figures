@@ -20,14 +20,26 @@ std::unique_ptr<Figure> RandomFigureFactory::create() {
 		{
 			double a = randomDouble(min, max);
 			double b = randomDouble(min, max);
-			double c = randomDouble(min, max);
 
-			while (!(a + b > c && a + c > b && b + c > a))
+			double lower = std::fabs(a - b) + 0.0001;   
+			double upper = a + b - 0.0001;              
+
+			if (lower < min) lower = min + 0.0001;
+			if (upper > max) upper = max - 0.0001;
+
+			if (lower >= upper)
 			{
 				a = randomDouble(min, max);
 				b = randomDouble(min, max);
-				c = randomDouble(min, max);
+
+				lower = std::fabs(a - b) + 0.0001;
+				upper = a + b - 0.0001;
+
+				if (lower < min) lower = min + 0.0001;
+				if (upper > max) upper = max - 0.0001;
 			}
+
+			double c = randomDouble(lower, upper);
 
 			ss << a << " " << b << " " << c;
 			return FigureRegistry::getInstance().create("triangle", ss);
