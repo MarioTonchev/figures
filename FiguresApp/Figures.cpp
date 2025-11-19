@@ -4,12 +4,14 @@
 #include <vector>
 #include "FigureFactorySelector.h"
 #include "FigureOperations.h"
+#include "RegisterFigures.h"
 
 using namespace std;
 
 int main()
 {
 	srand(time(NULL));
+	registerAllFigures();
 
 	unique_ptr<FigureFactory> factory;
 	unique_ptr<ifstream> stream = nullptr;
