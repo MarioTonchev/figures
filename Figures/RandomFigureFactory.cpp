@@ -12,6 +12,7 @@ std::unique_ptr<Figure> RandomFigureFactory::create() {
 	const double min = 1.0;
 	const double max = 10000.0;
 
+	std::stringstream ss;
 
 	switch (type)
 	{
@@ -28,21 +29,25 @@ std::unique_ptr<Figure> RandomFigureFactory::create() {
 				c = randomDouble(min, max);
 			}
 
-			return std::make_unique<Triangle>(a, b, c);
+			ss << a << " " << b << " " << c;
+			return FigureRegistry::getInstance().create("triangle", ss);
 		}
 		case 1:
 		{
 			double w = randomDouble(min, max);
 			double h = randomDouble(min, max);
-			return std::make_unique<Rectangle>(w, h);
+
+			ss << w << " " << h;
+			return FigureRegistry::getInstance().create("rectangle", ss);
 		}
 		case 2:
 		{
 			double r = randomDouble(min, max);
 			return std::make_unique<Circle>(r);
 
-			break;
-	}
+			ss << r;
+			return FigureRegistry::getInstance().create("circle", ss);
+		}
 	}
 
 	return nullptr;

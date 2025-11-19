@@ -1,6 +1,7 @@
 #pragma once
 
 #include <memory>
+#include "FigureRegistry.h"
 #include "Triangle.h"
 #include "Rectangle.h"
 #include "Circle.h"
