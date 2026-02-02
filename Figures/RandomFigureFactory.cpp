@@ -55,7 +55,6 @@ std::unique_ptr<Figure> RandomFigureFactory::create() {
 		case 2:
 		{
 			double r = randomDouble(min, max);
-			return std::make_unique<Circle>(r);
 
 			ss << r;
 			return FigureRegistry::getInstance().create("circle", ss);
